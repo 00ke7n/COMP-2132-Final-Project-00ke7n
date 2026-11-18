@@ -21,6 +21,8 @@ let gameOverFlag = false;
 
 let randomTeamElement = 0;
 
+let positionImage = document.getElementById('position-image');
+
 const gameOverNotify = document.getElementById('game-over');
 
 const gameStatusMessage = document.getElementById('game-status');
@@ -54,6 +56,8 @@ function startNewGame() {
 
     gameStatusMessage.innerHTML = "Pick a letter:";
 
+    positionImage.src = "images/P1.png";
+    
     unfade(gameStatusMessage);
 
     hint = "";
@@ -210,6 +214,17 @@ for (let i = 0; i < letterButtons.length; i++) {
 
                 incorrectCount.innerHTML = wrongGuesses;
 
+                const position = wrongGuesses + 1;
+
+                if (position < 8) {
+
+                    positionImage.src = "images/P" + position + ".png";
+
+                } else {
+
+                    positionImage.src = "images/DNF.png";
+
+                }
                 xxxEmoji.innerHTML += "❌";
 
                 if (wrongGuesses == 6) {
