@@ -1,0 +1,235 @@
+@charset "utf-8";
+/*box model reset*/
+
+@font-face {
+    font-family: "BeVietnamPro-Regular";
+    src: url(../fonts/BeVietnamPro-Regular.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "BeVietnamPro-Bold";
+    src: url(../fonts/BeVietnamPro-Bold.woff2) format("woff2");
+}
+
+/* ====== */
+/* BACKGROUND IMAGES STYLING */
+
+/* Container styling */
+.bg-images-column-container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;   /* Keeps background fixed while scrolling (or use 'absolute') */
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;     /* Full screen height */
+    z-index: -1;       /* Sends the column background BEHIND all text/content */
+}
+
+.bg-section {
+    width: 100%;
+    flex: 1;           /* Divides height equally between the 3 sections */
+    height: 300px; /* Adjust height or set to 100vh for full screen height */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+  }
+
+/* Individual Backgrounds */
+#index-1 {
+    background-image: url('../images/index/xcode.jpg');
+    background-color: #e53935; /* Fallback red color */
+}
+
+#index-2 {
+    background-image: url('../images/index/simracing.webp');
+    background-color: #fbc02d; /* Fallback yellow color */
+}
+
+#index-3 {
+    background-image: url('../images/index/karaoke-mic.jpg');
+    background-color: #81d4fa; /* Fallback blue color */
+}
+
+/* ==== */
+
+html {
+    font-size:16px;
+    box-sizing: border-box;
+
+    --color1: black;
+    --color2: #0F6292;
+    --color3: #16FF00;
+    --color4: white;
+    --color5: #FFED00;
+    --color6: #540B0E;
+    --color7: #9E2A2B;
+    --color8: rgb(0, 0, 95);
+
+    --primary: #0F6292;
+    --accent: #16FF00;
+    --highlight: #FFED00;
+    --background: #0A0C36;
+}
+/* ==========================================
+   1. Base Resets & Typography
+   ========================================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'BeVietnamPro-Regular';
+    font-size: 16px;
+    color: var(--color4);
+    background-color: #0a0c36;
+
+    margin: 0;
+    min-height: 100vh;
+
+    /* background-image: url(../images/binding-dark.png); */
+    background-attachment: fixed;
+}
+
+header {
+    width: 100%;
+    max-width: 900px;
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto; /* Ensures main itself is centered inside #wrapper */
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap; /* Stacks children cleanly top-to-bottom */
+    align-items: center;
+}
+
+footer {
+    width: 100%;
+    max-width: 900px;
+}
+
+#header-wrapper div {
+    text-align: center;
+    font-family: 'BeVietnamPro-Bold';
+    margin: 0;
+    font-size: 36px;
+    color: var(--color3);
+}
+
+h1 {
+    text-align: center;
+}
+
+h1 {
+    color: var(--color3);
+}
+
+h2 {
+    color: var(--color5);
+}
+
+/* section, #gaming-pc-setup { */
+section {
+    margin: 25px auto;
+}
+
+/* Fluid responsive images */
+img {
+  max-width: 90%;
+  height: auto;
+  display: block;
+}
+
+ul { 
+    list-style-type: "🔸"; 
+    margin-left: 20px;
+}
+
+a {
+    color: var(--color3);
+}
+
+/* ==========================================
+   2. Mobile-First Layout (Default)
+   ========================================== */
+
+.header, .footer {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.letter-btn {
+    width: 30px;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.letter-btn:disabled { 
+    opacity: 0.4; cursor: not-allowed; 
+}
+
+.blank-letter {
+    font-size: 36px;
+}
+
+#wrapper {
+    width: 100%;
+    max-width: 100%;
+    min-width: 320px;
+    margin: 0 auto;
+    padding:1px;
+
+    position: relative;
+    overflow-x: hidden; /* Safety lock against inner horizontal overflow */
+
+    /*sticky footer*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#header-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 0;
+    width: 100%;
+    min-width: 320px;
+}
+
+#hangman-emoji {
+    font-size: 72px;
+}
+
+#xxx {
+    font-size: 36px;
+}
+
+#btn-play-again {
+    width: 300px;
+    height: 30px;
+}
+
+/* ==========================================
+   3. Tablet & Desktop Layout (768px and up)
+   ========================================== */
+@media (min-width: 768px) {
+    
+}
+
+@media (min-width: 1024px) {
+
+}

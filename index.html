@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Claude Code
+Opus 5.5
+Medium effort
+Generated content for index.html using the following request: 
+@final_project/comp2132-project.pdf please generate just the html file in the final_project directory based on screenshots and pdf provided. generate one button for each letter for the hangman game -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="description" content="COMP2132 Final Project - Hangman Game by 00ke7n">
+
+    <title>00ke7n - COMP2132 - Hangman</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/hangman.js" defer></script>
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+    <header>
+        <div id="header-wrapper">
+            <h1>F1 Hangman</h1>
+        </div>
+    </header>
+
+    <main>
+
+        <h2>Guess the F1 team</h2>
+
+        <!-- Game board: hangman graphic, word blanks, hint, guess counter, letter buttons -->
+        <section id="game-board">
+
+            <p>
+                <span id="hangman-emoji"></span>
+            </p>
+            
+            <p>
+                <span id="xxx"></span>
+            </p>
+            <!-- JavaScript fills this with one .letter-slot span per letter of the word -->
+            <div id="word-display" aria-live="polite"></div>
+
+            <p id="hint">2026 Team Colour Hint: <br>
+                <span id="hint-text"></span>
+            </p>
+
+            <p id="guess-counter">
+                Incorrect guesses: 
+                <span id="incorrect-count">0</span>
+                /
+                <span id="max-guesses">7</span>
+            </p>
+
+            <h2 id="game-status"></h2>
+
+            <div id="letter-buttons">
+
+                <div class="letter-row">
+                    <button type="button" class="letter-btn" data-letter="a">A</button>
+                    <button type="button" class="letter-btn" data-letter="b">B</button>
+                    <button type="button" class="letter-btn" data-letter="c">C</button>
+                    <button type="button" class="letter-btn" data-letter="d">D</button>
+                    <button type="button" class="letter-btn" data-letter="e">E</button>
+                    <button type="button" class="letter-btn" data-letter="f">F</button>
+                    <button type="button" class="letter-btn" data-letter="g">G</button>
+                </div>
+
+                <div class="letter-row">
+                    <button type="button" class="letter-btn" data-letter="h">H</button>
+                    <button type="button" class="letter-btn" data-letter="i">I</button>
+                    <button type="button" class="letter-btn" data-letter="j">J</button>
+                    <button type="button" class="letter-btn" data-letter="k">K</button>
+                    <button type="button" class="letter-btn" data-letter="l">L</button>
+                    <button type="button" class="letter-btn" data-letter="m">M</button>
+                    <button type="button" class="letter-btn" data-letter="n">N</button>
+
+                </div>
+
+                <div class="letter-row">
+                    <button type="button" class="letter-btn" data-letter="o">O</button>
+                    <button type="button" class="letter-btn" data-letter="p">P</button>
+                    <button type="button" class="letter-btn" data-letter="q">Q</button>
+                    <button type="button" class="letter-btn" data-letter="r">R</button>
+                    <button type="button" class="letter-btn" data-letter="s">S</button>
+                    <button type="button" class="letter-btn" data-letter="t">T</button>
+                </div>
+
+                <div class="letter-row">
+                    <button type="button" class="letter-btn" data-letter="u">U</button>
+                    <button type="button" class="letter-btn" data-letter="v">V</button>
+                    <button type="button" class="letter-btn" data-letter="w">W</button>
+                    <button type="button" class="letter-btn" data-letter="x">X</button>
+                    <button type="button" class="letter-btn" 
+                    data-letter="y">Y</button>
+                    <button type="button" class="letter-btn" data-letter="z">Z</button>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Game over panel: hidden until the player wins or loses -->
+        <section id="game-over" class="hidden" aria-live="assertive">
+
+            <p id="answer-message">The answer was '<span id="answer-word"></span>'</p>
+
+        </section>
+
+        <button type="button" id="btn-play-again">Play Again</button>
+
+    </main>
+
+    <footer>
+        <ul>
+            <li>00ke7n</li>
+            <li>kevin.tai.mail@gmail.com</li>
+        </ul>
+    </footer>
+
+</div>
+
+</body>
+</html>
