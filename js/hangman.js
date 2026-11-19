@@ -103,7 +103,7 @@ function setupGame(teams) {
 
     const numberOfTeams = teamElements.length;
 
-    console.log('getRandomInt = ' + getRandomInt(numberOfTeams));
+    // console.log('getRandomInt = ' + getRandomInt(numberOfTeams));
 
     randomTeamElement = getRandomInt(numberOfTeams);  // need to be >0 in case the random int = 0
 
@@ -118,7 +118,7 @@ function setupGame(teams) {
 
     hint = teams[word];
 
-    console.log(word, hint);  // "REDBULL" "Red, Dark Blue"
+    // console.log(word, hint);  // "REDBULL" "Red, Dark Blue"
 
     wordArray = word.split('');
 
@@ -186,7 +186,7 @@ for (let i = 0; i < letterButtons.length; i++) {
 
                     blankWordArray[element] = letterMatch;
 
-                    console.log(blankWordArray);
+                    // console.log(blankWordArray);
                 });
 
                 let htmlBlanks = ``;
