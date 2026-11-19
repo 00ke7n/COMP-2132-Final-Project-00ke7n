@@ -148,6 +148,12 @@ a {
   font-size: 36px;
 }
 
+.letter-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 #wrapper {
   width: 100%;
   max-width: 100%;
@@ -175,6 +181,7 @@ a {
 
 #hangman-emoji {
   font-size: 72px;
+  display: block;
 }
 
 #xxx {
@@ -189,6 +196,30 @@ a {
 #position-image {
   width: 80px;
   max-width: 80px;
+  margin: 0 auto;
+}
+
+#hangman-emoji,
+#word-display,
+#hint,
+#hint-text,
+#guess-counter,
+#game-status {
+  text-align: center;
+}
+
+#position-and-emoji-section {
+  border: 1px solid white;
+  padding: 1rem;
+  margin-bottom: 40px;
+  width: 300px;
+}
+
+#letters-section {
+  border: 1px solid white;
+  padding: 1rem;
+  margin-top: 40px;
+  width: 300px;
 }
 
 /* ==========================================

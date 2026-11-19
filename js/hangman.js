@@ -1,7 +1,6 @@
 // 🏁🏎️ = guessed the correct word
 // 🏎️ = in progress
 // 🏳️🏎️ = 1 guess left
-// ❌ = ran out of guesses
 
 const kMaxGuesses = 7;
 
@@ -28,8 +27,6 @@ const gameOverNotify = document.getElementById('game-over');
 const gameStatusMessage = document.getElementById('game-status');
 
 const hangmanEmoji = document.getElementById('hangman-emoji');
-
-const xxxEmoji = document.getElementById('xxx');
 
 const hintText = document.getElementById('hint-text');
 
@@ -71,8 +68,6 @@ function startNewGame() {
     word = ""
 
     gameOverFlag = false;
-
-    xxxEmoji.innerHTML = "";
     
     letterButtonsVisibility(true);
 
@@ -225,8 +220,6 @@ for (let i = 0; i < letterButtons.length; i++) {
                     positionImage.src = "images/DNF.png";
 
                 }
-                xxxEmoji.innerHTML += "❌";
-
                 if (wrongGuesses == 6) {
 
                     hangmanEmoji.innerHTML = "🏳️" + hangmanEmoji.innerHTML;
@@ -252,7 +245,7 @@ function handleGameOver(winFlag) {
 
         hangmanEmoji.innerHTML = "🏎️🏁";
     
-        gameStatusMessage.innerHTML = "YOU TOOK THE CHECKERED FLAG!";
+        gameStatusMessage.innerHTML = "YOU FINISHED THE RACE!";
 
         // no need to display answer when user guessed correctly
         answerMessage.hidden = true;

@@ -41,19 +41,12 @@ Generated content for index.html using the following request:
         <!-- Game board: hangman graphic, word blanks, hint, guess counter, letter buttons -->
         <section id="game-board">
 
-            <p>
+            <div id="position-and-emoji-section">
                 <span id="hangman-position">
-                    <img id="position-image" alt="Hangman">
+                    <img id="position-image" src="images/P1.png" alt="Hangman">
                 </span>
-            </p>
-
-            <p>
                 <span id="hangman-emoji"></span>
-            </p>
-            
-            <p>
-                <span id="xxx"></span>
-            </p>
+            </div>
             <!-- JavaScript fills this with one .letter-slot span per letter of the word -->
             <div id="word-display" aria-live="polite"></div>
 
@@ -68,60 +61,62 @@ Generated content for index.html using the following request:
                 <span id="max-guesses">7</span>
             </p>
 
-            <h2 id="game-status"></h2>
+            <div id="letters-section">
+                <h2 id="game-status">game-status</h2>
 
-            <div id="letter-buttons">
+                <div id="letter-buttons">
 
-                <div class="letter-row">
-                    <button type="button" class="letter-btn" data-letter="a">A</button>
-                    <button type="button" class="letter-btn" data-letter="b">B</button>
-                    <button type="button" class="letter-btn" data-letter="c">C</button>
-                    <button type="button" class="letter-btn" data-letter="d">D</button>
-                    <button type="button" class="letter-btn" data-letter="e">E</button>
-                    <button type="button" class="letter-btn" data-letter="f">F</button>
-                    <button type="button" class="letter-btn" data-letter="g">G</button>
+                    <div class="letter-row">
+                        <button type="button" class="letter-btn" data-letter="a">A</button>
+                        <button type="button" class="letter-btn" data-letter="b">B</button>
+                        <button type="button" class="letter-btn" data-letter="c">C</button>
+                        <button type="button" class="letter-btn" data-letter="d">D</button>
+                        <button type="button" class="letter-btn" data-letter="e">E</button>
+                        <button type="button" class="letter-btn" data-letter="f">F</button>
+                        <button type="button" class="letter-btn" data-letter="g">G</button>
+                    </div>
+
+                    <div class="letter-row">
+                        <button type="button" class="letter-btn" data-letter="h">H</button>
+                        <button type="button" class="letter-btn" data-letter="i">I</button>
+                        <button type="button" class="letter-btn" data-letter="j">J</button>
+                        <button type="button" class="letter-btn" data-letter="k">K</button>
+                        <button type="button" class="letter-btn" data-letter="l">L</button>
+                        <button type="button" class="letter-btn" data-letter="m">M</button>
+                        <button type="button" class="letter-btn" data-letter="n">N</button>
+
+                    </div>
+
+                    <div class="letter-row">
+                        <button type="button" class="letter-btn" data-letter="o">O</button>
+                        <button type="button" class="letter-btn" data-letter="p">P</button>
+                        <button type="button" class="letter-btn" data-letter="q">Q</button>
+                        <button type="button" class="letter-btn" data-letter="r">R</button>
+                        <button type="button" class="letter-btn" data-letter="s">S</button>
+                        <button type="button" class="letter-btn" data-letter="t">T</button>
+                    </div>
+
+                    <div class="letter-row">
+                        <button type="button" class="letter-btn" data-letter="u">U</button>
+                        <button type="button" class="letter-btn" data-letter="v">V</button>
+                        <button type="button" class="letter-btn" data-letter="w">W</button>
+                        <button type="button" class="letter-btn" data-letter="x">X</button>
+                        <button type="button" class="letter-btn" 
+                        data-letter="y">Y</button>
+                        <button type="button" class="letter-btn" data-letter="z">Z</button>
+                    </div>
+
                 </div>
-
-                <div class="letter-row">
-                    <button type="button" class="letter-btn" data-letter="h">H</button>
-                    <button type="button" class="letter-btn" data-letter="i">I</button>
-                    <button type="button" class="letter-btn" data-letter="j">J</button>
-                    <button type="button" class="letter-btn" data-letter="k">K</button>
-                    <button type="button" class="letter-btn" data-letter="l">L</button>
-                    <button type="button" class="letter-btn" data-letter="m">M</button>
-                    <button type="button" class="letter-btn" data-letter="n">N</button>
-
-                </div>
-
-                <div class="letter-row">
-                    <button type="button" class="letter-btn" data-letter="o">O</button>
-                    <button type="button" class="letter-btn" data-letter="p">P</button>
-                    <button type="button" class="letter-btn" data-letter="q">Q</button>
-                    <button type="button" class="letter-btn" data-letter="r">R</button>
-                    <button type="button" class="letter-btn" data-letter="s">S</button>
-                    <button type="button" class="letter-btn" data-letter="t">T</button>
-                </div>
-
-                <div class="letter-row">
-                    <button type="button" class="letter-btn" data-letter="u">U</button>
-                    <button type="button" class="letter-btn" data-letter="v">V</button>
-                    <button type="button" class="letter-btn" data-letter="w">W</button>
-                    <button type="button" class="letter-btn" data-letter="x">X</button>
-                    <button type="button" class="letter-btn" 
-                    data-letter="y">Y</button>
-                    <button type="button" class="letter-btn" data-letter="z">Z</button>
-                </div>
-
             </div>
 
         </section>
 
         <!-- Game over panel: hidden until the player wins or loses -->
-        <section id="game-over" class="hidden" aria-live="assertive">
+        <div id="game-over" class="hidden" aria-live="assertive">
 
             <p id="answer-message">The answer was '<span id="answer-word"></span>'</p>
 
-        </section>
+        </div>
 
         <button type="button" id="btn-play-again">Play Again</button>
 
